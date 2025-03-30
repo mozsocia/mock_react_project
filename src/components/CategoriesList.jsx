@@ -12,7 +12,7 @@ const CategoriesList = () => {
       try {
         setLoading(true)
         // API endpoint - will be intercepted by MSW in development
-        const response = await axios.get('https://api.example.com/categories')
+        const response = await axios.get('/categories')
         setCategories(response.data)
         setLoading(false)
       } catch (err) {
